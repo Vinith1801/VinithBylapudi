@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import WorkExperience from './components/WorkExperience';
-import AboutSection from './components/AboutSection';
+import AboutSection from './components/About';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 

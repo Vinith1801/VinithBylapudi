@@ -1,3 +1,25 @@
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaReact,
+  FaBootstrap,
+  FaNodeJs,
+  FaPhp,
+  FaGitAlt,
+  FaDatabase,
+} from "react-icons/fa";
+import {
+  SiTailwindcss,
+  SiFramer,
+  SiExpress,
+  SiMysql,
+  SiMongodb,
+  SiGithub,
+  SiPostman,
+  SiJsonwebtokens,
+} from "react-icons/si";
+
 const about = {
   bio: [
     "I am a dedicated Full Stack Developer with one year of contract-based experience delivering robust and scalable web solutions.",
@@ -7,23 +29,23 @@ const about = {
   ],
 
   skills: [
-    "HTML5",
-    "CSS3",
-    "JavaScript (ES6+)",
-    "React (Vite)",
-    "Bootstrap",
-    "TailwindCSS",
-    "Framer Motion",
-    "Node.js",
-    "Express.js",
-    "PHP",
-    "MySQL",
-    "MongoDB",
-    "REST APIs",
-    "JWT Authentication",
-    "Git & GitHub"
+    { name: "HTML5", icon: FaHtml5, color: "text-orange-500" },
+    { name: "CSS3", icon: FaCss3Alt, color: "text-blue-500" },
+    { name: "JavaScript (ES6+)", icon: FaJsSquare, color: "text-yellow-400" },
+    { name: "React (Vite)", icon: FaReact, color: "text-cyan-400" },
+    { name: "Bootstrap", icon: FaBootstrap, color: "text-purple-500" },
+    { name: "TailwindCSS", icon: SiTailwindcss, color: "text-sky-400" },
+    { name: "Framer Motion", icon: SiFramer, color: "text-pink-400" },
+    { name: "Node.js", icon: FaNodeJs, color: "text-green-500" },
+    { name: "Express.js", icon: SiExpress, color: "text-gray-300" },
+    { name: "PHP", icon: FaPhp, color: "text-indigo-300" },
+    { name: "MySQL", icon: SiMysql, color: "text-blue-300" },
+    { name: "MongoDB", icon: SiMongodb, color: "text-green-400" },
+    { name: "REST APIs", icon: FaDatabase, color: "text-orange-400" },
+    { name: "JWT Authentication", icon: SiJsonwebtokens, color: "text-rose-400" },
+    { name: "Git", icon: FaGitAlt, color: "text-red-400" },
+    { name: "GitHub", icon: SiGithub, color: "text-white" },
   ],
-
   currentFocus:
     "Improving backend architecture and enhancing user experience through thoughtful frontend design using modern JS libraries and frameworks.",
 };

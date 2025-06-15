@@ -14,9 +14,11 @@ const projects = [
     outcome:
       "Delivered clean dashboard UX with secure authentication layers.",
     image: [
-      "/images/quiz-app-1.png",
-      "/images/quiz-app-2.png",
-      "/images/quiz-app-3.png"
+      "/images/quiz/quiz-2.png",
+      "/images/quiz/quiz-1.png",
+      "/images/quiz/quiz-3.png",
+      "/images/quiz/quiz-4.png",
+      "/images/quiz/quiz-5.png",
     ],
     liveDemo: "",
     repoLink: ""
@@ -33,8 +35,14 @@ const projects = [
     tech: ["React (Vite)", "Node.js", "Express.js", "MongoDB", "JWT"],
     role: "Backend architect and frontend integrator.",
     outcome: "Improved access control in multi-role environments.",
-    image: ["/assets/rbac.png"],
-    liveDemo: "",
+    image: [
+      "/images/rbac/user.png", 
+      "/images/rbac/admin.png", 
+      "/images/rbac/editor.png",
+      "/images/rbac/login.png",
+      "/images/rbac/register.png", 
+    ],
+    liveDemo: "https://access-forge.vercel.app",
     repoLink: ""
   },
   {

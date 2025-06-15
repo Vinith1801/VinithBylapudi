@@ -1,37 +1,52 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
+import { motion } from "framer-motion";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ project, index }) => {
   return (
-    <div className="bg-slate-800 p-6 rounded-2xl shadow-md hover:shadow-lg transition">
-      <Swiper
-        modules={[Pagination, Navigation]}
-        spaceBetween={10}
-        slidesPerView={1}
-        pagination={{ clickable: true }}
-        navigation
-        className="rounded-xl overflow-hidden"
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
+      viewport={{ once: true }}
+      className="w-full min-h-[520px] bg-white/5 backdrop-blur-md border border-white/5 p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all flex flex-col"
+    >
+      {/* Swiper Image Slider */}
+      <div className="w-full aspect-video overflow-hidden rounded-xl mb-4">
+        <Swiper
+          modules={[Pagination, Navigation]}
+          spaceBetween={10}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+          navigation
+          className="rounded-xl overflow-hidden"
+          loading="lazy"
         >
-        {project.image.map((img, index) => (
-          <SwiperSlide key={index}>
-            <img
-              src={img}
-              alt={`${project.title} screenshot ${index + 1}`}
-              className="w-full h-64 object-cover"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-      <h3 className="text-xl font-semibold text-white mb-2">{project.title}</h3>
+          {project.image.map((img, i) => (
+            <SwiperSlide key={i}>
+              <img
+                src={img}
+                alt={`${project.title} screenshot ${i + 1}`}
+                className="w-full h-64 object-cover rounded-xl"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+
+      {/* Project Content */}
+      <h3 className="text-2xl font-semibold text-white mb-2">
+        {project.title}
+      </h3>
       <p className="text-gray-300 mb-4">{project.overview}</p>
 
-      <div className="mb-4">
+      {/* Features */}
+      <div className="mb-3">
         <h4 className="text-white font-medium mb-1">Key Features:</h4>
         <ul className="list-disc list-inside text-gray-400 text-sm space-y-1">
           {project.features.map((feature, idx) => (
@@ -40,13 +55,14 @@ const ProjectCard = ({ project }) => {
         </ul>
       </div>
 
-      <div className="mb-4">
+      {/* Technologies */}
+      <div className="mb-3">
         <h4 className="text-white font-medium mb-1">Technologies:</h4>
         <div className="flex flex-wrap gap-2">
           {project.tech.map((tech, idx) => (
             <span
               key={idx}
-              className="bg-slate-700 text-sm text-white px-3 py-1 rounded-full"
+              className="bg-white/10 text-white text-sm px-3 py-1 rounded-full shadow-sm"
             >
               {tech}
             </span>
@@ -54,16 +70,22 @@ const ProjectCard = ({ project }) => {
         </div>
       </div>
 
-      <p className="text-gray-400 text-sm mt-3"><strong>Role:</strong> {project.role}</p>
-      <p className="text-gray-400 text-sm mt-1"><strong>Outcome:</strong> {project.outcome}</p>
+      {/* Role & Outcome */}
+      <p className="text-gray-400 text-sm mt-3">
+        <strong>Role:</strong> {project.role}
+      </p>
+      <p className="text-gray-400 text-sm mt-1">
+        <strong>Outcome:</strong> {project.outcome}
+      </p>
 
-      <div className="flex gap-3 mt-4">
+      {/* Action Buttons */}
+      <div className="flex flex-wrap gap-3 mt-auto pt-6">
         {project.liveDemo && (
           <a
             href={project.liveDemo}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition"
+            className="text-sm px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 transition-all shadow hover:scale-105"
           >
             Live Demo
           </a>
@@ -73,13 +95,13 @@ const ProjectCard = ({ project }) => {
             href={project.repoLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm px-4 py-2 rounded bg-gray-600 text-white hover:bg-gray-700 transition"
+            className="text-sm px-4 py-2 rounded-full bg-gray-600 hover:bg-gray-700 transition-all shadow hover:scale-105"
           >
             GitHub
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

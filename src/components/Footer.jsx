@@ -8,13 +8,13 @@ const Footer = () => {
       </p>
       <div className="mt-2 space-x-4">
         <a
-          href="mailto:bylapudivinith03@gmail.com"
+          href="mailto:bylapudivinith0812@gmail.com"
           className="text-blue-400 text-sm hover:underline"
         >
           Email
         </a>
         <a
-          href="https://github.com/" // Replace with actual GitHub URL
+          href="https://github.com/Vinith1801"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-400 text-sm hover:underline"
