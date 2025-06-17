@@ -23,6 +23,7 @@ const Contact = () => {
             window.location.href = `mailto:bylapudivinith0812@gmail.com?subject=New Contact Form Message&body=Name: ${e.target.name.value}%0DEmail: ${e.target.email.value}%0DMessage: ${e.target.message.value}`;
           }}
           className="grid gap-6"
+          autoComplete="on"
         >
           <input
             type="text"
