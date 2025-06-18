@@ -20,7 +20,7 @@ const projects = [
       "/images/quiz/quiz-4.png",
       "/images/quiz/quiz-5.png",
     ],
-    liveDemo: "",
+    liveDemo: "https://quiz-nest-orcin.vercel.app",
     repoLink: ""
   },
   {
