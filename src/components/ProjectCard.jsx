@@ -87,7 +87,7 @@ const ProjectCard = ({ project, index }) => {
             rel="noopener noreferrer"
             className="text-sm px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 transition-all shadow hover:scale-105"
           >
-            Live Demo
+            Live
           </a>
         )}
         {project.repoLink && (
