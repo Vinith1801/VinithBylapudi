@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "Projects", href: "#projects" },
     { name: "Experience", href: "#experience" },
     { name: "Contact", href: "#contact" },
+     { name: "Resume", href: "/Vinith-Bylapudi-Fullstack-Developer.pdf", external: true },
   ];
 
   return (
@@ -27,6 +28,7 @@ const Navbar = () => {
               <a
                 href={link.href}
                 className="hover:text-white transition duration-300 relative group"
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
                 {link.name}
                 <span className="block h-0.5 w-0 group-hover:w-full transition-all bg-cyan-400 absolute bottom-0 left-0"></span>

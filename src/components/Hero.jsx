@@ -25,12 +25,22 @@ const Hero = () => {
           A passionate Full Stack Developer building user-focused, scalable
           web apps with React, Node.js, and MySQL.
         </p>
-        <a
-          href="#contact"
-          className="inline-block px-6 py-3 rounded-full text-white bg-cyan-500 hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/30 hover:shadow-cyan-600/40"
-        >
-          Let’s Connect
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a
+            href="#contact"
+            className="inline-block px-6 py-3 rounded-full text-white bg-cyan-500 hover:bg-cyan-600 transition shadow-lg shadow-cyan-500/30 hover:shadow-cyan-600/40"
+          >
+            Let’s Connect
+          </a>
+          <a
+            href="/Vinith-Bylapudi-Fullstack-Developer.pdf"
+            download
+            className="inline-block px-6 py-3 rounded-full text-white border border-cyan-500 hover:bg-cyan-600 hover:border-cyan-600 transition shadow-lg shadow-cyan-500/30 hover:shadow-cyan-600/40"
+          >
+            Download Resume
+          </a>
+        </div>
+
       </motion.div>
 
       {/* Right Image */}
