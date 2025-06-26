@@ -1,6 +1,7 @@
 const projects = [
   {
-    title: "Quiz Web App",
+    slug: "quiz-nest",
+    title: "QuizNest",
     overview:
       "A secure and dynamic quiz platform with user authentication and score tracking.",
     features: [
@@ -9,7 +10,7 @@ const projects = [
       "Timed Sessions",
       "Protected Routes",
     ],
-    tech: ["React (Vite)", "Node.js", "Express.js", "MySQL", "JWT"],
+    tech: ["React (Vite)", "Node.js", "Express.js", "MongoDB", "JWT"],
     role: "Full-stack developer — implemented UI, backend logic, and data handling.",
     outcome:
       "Delivered clean dashboard UX with secure authentication layers.",
@@ -24,7 +25,8 @@ const projects = [
     repoLink: ""
   },
   {
-    title: "User Access Management System",
+    slug: "access-forge",
+    title: "Access Forge",
     overview:
       "A role-based access control (RBAC) system for secure user permission management.",
     features: [
@@ -46,6 +48,7 @@ const projects = [
     repoLink: ""
   },
   {
+    slug: "hms-mentor",
     title: "Highbrow Mentor Solutions (HMS)",
     overview:
       "An academic consulting platform offering PhD mentoring services.",
@@ -65,6 +68,7 @@ const projects = [
     repoLink: ""
   },
   {
+    slug: "noble-scribe",
     title: "NobleScribe Publications",
     overview:
       "A self-publishing platform for aspiring authors with an elegant landing experience.",
@@ -81,6 +85,7 @@ const projects = [
     repoLink: ""
   },
   {
+    slug: "strz-dashboard",
     title: "Straz Dashboard",
     overview:
       "A CRUD admin dashboard for managing users and content across different entities.",
