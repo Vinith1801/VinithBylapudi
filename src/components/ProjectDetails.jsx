@@ -31,7 +31,11 @@ const ProjectDetails = () => {
       </Link>
 
       {/* Glass container */}
-      <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 shadow-lg">
+      <div className=" rounded-2xl p-8 shadow-lg">
+        {/* Blurred Glow Background Element */}
+      <div className="absolute w-[60vw] max-w-[600px] aspect-square bg-blue-500 opacity-20 blur-[60px] sm:blur-[90px] md:blur-[120px] rounded-full z-1 top-[10vh] right-0"></div>
+      <div className="absolute w-[60vw] max-w-[600px] aspect-square bg-blue-500 opacity-20 blur-[60px] sm:blur-[90px] md:blur-[120px] rounded-full z-1 top-[102vh] left-0"></div>
+
         {/* Title & Overview */}
         <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">{project.title}</h1>
         <p className="text-lg text-gray-300 mb-10">{project.overview}</p>

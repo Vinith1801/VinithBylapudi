@@ -5,7 +5,7 @@ const ProjectCard = ({ project }) => {
   const thumbnail = project.image[0]; // Use the first image as preview
 
   return (
-    <div className="group bg-gradient-to-br from-[#1c2733] to-[#0f1a25] border border-white/10 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
+    <div className="group bg-gradient-to-br from-[#1c273375] to-[#0f1a25a7] border border-white/10 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 flex flex-col">
       {/* Image Thumbnail */}
       <div className="w-full h-48 overflow-hidden">
         <img

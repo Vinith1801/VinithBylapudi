@@ -7,12 +7,14 @@ import AboutSection from './components/About';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
 import ProjectDetails from "./components/ProjectDetails"; // New component
+import ScrollProgress from './components/ScrollProgress'
 
 function App() {
   return (
     <Router>
       <div className="bg-[#0C1C2C] text-white min-h-screen">
         <Navbar />
+        <ScrollProgress /> {/* 👈 Insert here, just after Navbar */}
         <Routes>
           <Route path="/" element={
             <>
